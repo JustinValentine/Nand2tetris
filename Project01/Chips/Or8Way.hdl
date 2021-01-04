@@ -1,0 +1,35 @@
+/** returns 1 if one of in[0], ..., in[7] is 1 */ 
+
+CHIP Or8Way{
+    IN in[8];
+    OUT out;
+
+    PARTS:
+    Nand(a=in[0], b=in[0], out=c0); 
+    Nand(a=in[1], b=in[1], out=c1); 
+    Nand(a=c0, b=c1, out=o0); 
+
+    Nand(a=in[2], b=in[2], out=c2); 
+    Nand(a=in[3], b=in[3], out=c3); 
+    Nand(a=c2, b=c3, out=o1); 
+
+    Nand(a=in[4], b=in[4], out=c4); 
+    Nand(a=in[5], b=in[5], out=c5); 
+    Nand(a=c4, b=c5, out=o2); 
+
+    Nand(a=in[6], b=in[6], out=c6); 
+    Nand(a=in[7], b=in[7], out=c7); 
+    Nand(a=c6, b=c7, out=o3); 
+
+    Nand(a=o0, b=o0, out=c8); 
+    Nand(a=o1, b=o1, out=c9); 
+    Nand(a=c8, b=c9, out=o4);
+
+    Nand(a=o2, b=o2, out=c10); 
+    Nand(a=o3, b=o3, out=c11); 
+    Nand(a=c10, b=c11, out=o5); 
+
+    Nand(a=o4, b=o4, out=c12); 
+    Nand(a=o5, b=o5, out=c13); 
+    Nand(a=c12, b=c13, out=out); 
+}
