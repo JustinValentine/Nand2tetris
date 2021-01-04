@@ -1,0 +1,12 @@
+/** if sel=0 return a, else return b. */
+
+CHIP Mux { 
+    IN a, b, sel; 
+    OUT out; 
+
+    PARTS: 
+    Nand(a=sel, b=sel, out=c0); //inverts sel
+    Nand(a=a, b=c0, out=c1); 
+    Nand(a=b, b=sel, out=c2); 
+    Nand(a=c1, b=c2, out=out); 
+}
