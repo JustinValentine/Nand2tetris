@@ -6,5 +6,5 @@ The objective of these 12 projects is to build a working 16-bit computer from no
 
 ## Project 1: Boolean Logic 
 * A set of basic chips described in HDL. 
-* Nand gates are the only primitive chip used 
 * Each chip has a respective test script and output file.
+* Constructed from Nand gates
