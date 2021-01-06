@@ -6,6 +6,5 @@ The objective of these 12 projects is to build a working 16-bit computer from no
 
 ## Project 1: Boolean Logic 
 * A set of basic chips described in HDL 
-* Each chip has a respective test script, output file, and comparison file 
-* Chips built from Nand gates
+* All Chips built from Nand gates
 * Hardware simulator can be found at: https://www.nand2tetris.org/software 
